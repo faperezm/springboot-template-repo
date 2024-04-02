@@ -1,0 +1,16 @@
+name: build and test pipeline
+on:
+  push:
+    branches:
+    - feature/*
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  continuous_integration:
+    uses: faperezm/workflow-templates/.github/workflows/generic.yaml@main
+    #uses: faperezm/workflow-templates/.github/workflows/generic.yaml@052917e985304d4790d75760f26a464cf05725e0
+    with:
+      inputs: ${{ github.event_name == 'pull_request' }}
+      
