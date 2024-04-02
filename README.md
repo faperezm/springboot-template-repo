@@ -1,1 +1,1 @@
-# template-springboot-tempalte-repo
+# springboot-template-repo
